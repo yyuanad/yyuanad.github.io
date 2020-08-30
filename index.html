@@ -1,1 +1,411 @@
-hello world
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yuan Yuan's Homepage</title>
+  <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+  <!--<link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Bulma Version 0.7.5-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
+  <link href='css/style.css' rel='stylesheet' type='text/css'>
+  <script defer src="font-awesome-5.9.0/js/brands.min.js"></script>
+  <script defer src="font-awesome-5.9.0/js/fontawesome.min.js"></script>
+  <script src="js/menuspy.js"></script>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-2">
+          <div class="sticky">
+            <figure class="image is-256x256">
+              <img class="is-rounded" src="images/psb3.jpg">
+            </figure>
+            <div class="content">
+              <h3>Yuan Yuan 袁园</h3>
+              <h6>Postdoc Research Associate</h6>
+            </div>
+            <!-- details -->
+            <div class="details">
+              <h3>EMAIL</h3>
+              <p><a href="mailto:miayuan@mit.edu">miayuan<br>[at]mit[dot]edu</a></p>
+            </div>
+            <!-- social network icons -->
+            <div class="social">
+              <a href="https://github.com/yyuanad" target="_blank">
+                <span class="fab fa-github fa-2x" style="display:inline; text-decoration: none"></span>
+              </a>
+              <a href="https://scholar.google.com/citations?user=9tI89HMAAAAJ" target="_blank">
+                <span class="fab fa-google fa-2x" style="display:inline; text-decoration: none"></span>
+              </a>
+              <a href="https://www.linkedin.com/in/yuan-yuan-96451747/" target="_blank">
+                <span class="fab fa-linkedin fa-2x" style="display:inline; text-decoration: none"></span>
+              </a>
+              <!--<a href="https://www.facebook.com/tianweishen.shen" target="_blank">-->
+                <!--<span class="fab fa-facebook fa-2x" style="display:inline; text-decoration: none"></span>-->
+              <!--</a>-->
+              <!--<a href="https://twitter.com/HegongEngineer" target="_blank">-->
+                <!--<span class="fab fa-twitter fa-2x" style="display:inline; text-decoration: none"></span>-->
+              <!--</a>-->
+            </div>
+
+
+            <div id="sidebar" class="menu sticky is-hidden-mobile">
+              <p class="menu-label"><b>Quick Links</b></p>
+              <ul class="menu-list">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#miscellaneous">Miscellaneous</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="column">
+          <div class="content">
+
+
+            <!--Intro-->
+            <h3 id="intro">Intro</h3>
+            <p>I am a Postdoctoral Research Associate at <a href="https://www.csail.mit.edu/" target="_blank">Computer Science & Artificial Intelligence Lab</a>
+              of <a href="http://www.mit.edu/">Massachusetts Institute of Technology</a>, working with Prof. <a href="http://people.csail.mit.edu/dina/">Dina Katabi</a>.
+              I obtained Ph.D. degree in ECE department from <a href="http://www.ust.hk/">Hong Kong University of Science and Technology</a>. My supervisor was Prof. <a href="https://sites.google.com/view/dyyeung">Dit-Yan Yeung</a>.
+              I was a visiting research scholar working with Prof. <a href="http://www.cs.cmu.edu/~abhinavg/">Abhinav Gupta</a> in the <a href="https://www.ri.cmu.edu/">Robotics Institute</a> of <a href="http://www.cs.cmu.edu/">Carnegie Mellon University</a>.
+              Before that, I received my B.S. degree in EE department from Huazhong University of Science and Technology.
+
+            </p>
+
+
+            <!--Research Interests-->
+            <h3 id="intro">Research Interests</h3>
+            <li>Learning-based wireless sensing, with application to privacy-preserved healthcare and human sensing</li>
+            <li>General video understanding, including video object detection, temporal action localization and human action recognition</li>
+            <li>Learning with sequential data, e.g. speech, video, breathing</li>
+            <li>Deep learning, weakly-supervised learning, unsupervised learning</li>
+
+
+            <!--News-->
+            <h3 id="news">
+              News
+            </h3>
+            <ul>
+              <li><span><a href="http://rf-diary.csail.mit.edu/">In-home Daily-Life Captioning Using Radio Signals</a> is accepted to ECCV 2020 as oral presentation.</span></li>
+              <li><span><a href="http://rf-reid.csail.mit.edu/">Learning Longterm Representations for Person Re-Identification Using Radio Signals</a> is accepted to CVPR 2020.</span></li>
+
+            </ul>
+
+
+            <!--Selected Publications-->
+            <h3 id="publications">Selected Publications</h3>
+            <h5><a href="https://scholar.google.com/citations?user=9tI89HMAAAAJ">[Full List]</a></h5> <br>
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2020_eccv_rf_diary.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>In-home Daily-Life Captioning Using Radio Signals</b><br>
+                    Lijie Fan*, Tianhong Li*, <b>Yuan Yuan</b> and Dina Katabi<br>
+                    <i>European Conference on Computer Vision (<b>ECCV 2020</b>)</i><br>
+                    <a href="http://rf-diary.csail.mit.edu/" target="_blank">[<u>Project Page</u>]</a>
+                    <a href="http://rf-diary.csail.mit.edu/papers/rfdiary_eccv.pdf" target="_blank">[<u>PDF</u>]</a>
+                    <a href="https://arxiv.org/abs/2008.10966" target="_blank">[<u>arXiv</u>]</a>
+                    <a href="http://rf-diary.csail.mit.edu/slides/longtalk.pdf" target="_blank">[<u>Slides</u>]</a>
+                    <a href="https://www.youtube.com/watch?v=j528nQs4_a8&feature=youtu.be" target="_blank">[<u>Demo</u>]</a>
+                    <a href="https://www.youtube.com/watch?v=LA-JW4_ovAQ&feature=youtu.be" target="_blank">[<u>Video</u>]</a>
+                    <a href="https://www.youtube.com/watch?v=S2Y-zPJnl9U&feature=youtu.be" target="_blank">[<u>Talk</u>]</a>
+                    <a href="https://www.csail.mit.edu/news/device-nursing-homes-can-monitor-residents-activities-permission-and-without-video" target="_blank">[<u>CSAIL News</u>]</a>
+                    <a href="https://techcrunch.com/2020/08/24/mit-wireless-system-can-monitor-what-care-facility-residents-are-doing-while-preserving-privacy/" target="_blank">[<u>TechCrunch</u>]</a>
+                    <a href="https://www.engadget.com/mit-wireless-signals-monitoring-machine-learning-rf-diary-040049578.html" target="_blank">[<u>Engadget</u>]</a>
+                    <a href="https://venturebeat.com/2020/08/24/mit-csails-rf-diary-monitors-people-through-walls-and-in-total-darkness/" target="_blank">[<u>VentureBeat</u>]</a><br>
+                    <b>Oral Presentation</b><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2020_cvpr_rf_reid.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Learning Longterm Representations for Person Re-Identification Using Radio Signals</b><br>
+                    Lijie Fan*, Tianhong Li*, Rongyao Fang*, Rumen Hristov, <b>Yuan Yuan</b> and Dina Katabi<br>
+                    <i>Computer Vision and Pattern Recognition (<b>CVPR 2020</b>)</i><br>
+                    <a href="http://rf-reid.csail.mit.edu/" target="_blank">[<u>Project Page</u>]</a>
+                    <a href="http://rf-reid.csail.mit.edu/papers/rfreid_cvpr.pdf" target="_blank">[<u>PDF</u>]</a>
+                    <a href="https://arxiv.org/abs/2004.01091" target="_blank">[<u>arXiv</u>]</a>
+                    <a href="https://www.youtube.com/watch?v=oYv30obQ8P4&feature=youtu.be" target="_blank">[<u>Video</u>]</a>
+                    <a href="https://www.csail.mit.edu/news/home-health-device-uses-wireless-signals-identify-person-its-seen">[<u>CSAIL News</u>]</a>
+                    <a href="https://techcrunch.com/2020/06/16/mits-new-way-to-remotely-monitor-vital-signs-over-time-could-help-with-early-covid-19-detection-in-care-homes/" target="_blank">[<u>TechCrunch</u>]</a>
+                    <a href="https://www.yahoo.com/lifestyle/mits-way-remotely-monitor-vital-132517815.html" target="_blank">[<u>Yahoo News</u>]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2019_iclr_maan.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Marginalized Average Attentional Network For Weakly-Supervised Learning</b><br>
+                    <b>Yuan Yuan</b>, Yueming Lyu, Xi Shen, Ivor W. Tsang and Dit-Yan Yeung<br>
+                    <i>International Conference on Learning Representations (<b>ICLR 2019</b>)</i><br>
+                    <a href="https://arxiv.org/pdf/1905.08586.pdf" target="_blank">[<u>PDF</u>]</a>
+                    <a href="https://github.com/yyuanad/MAAN" target="_blank">[<u>Code</u>]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2019_jmlr_yueming.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Efficient Batch Black-box Optimization with Deterministic Regret Bounds</b><br>
+                    Yueming Lyu, <b>Yuan Yuan</b> and Ivor W. Tsang<br>
+                    <i> Under Review (<b>JMLR 2019</b>)</i><br>
+                    <a href="https://arxiv.org/pdf/1905.10041.pdf" target="_blank">[<u>arXiv</u>]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2017_iccv_TD_GrapgLSTM.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Temporal Dynamic Graph LSTM for Action-driven Video Object Detection</b><br>
+                    <b>Yuan Yuan</b>, Xiaodan Liang, Xiaolong Wang, Dit-Yan Yeung and Abhinav Gupta<br>
+                    <i>International Conference on Computer Vision (<b>ICCV 2017</b>)</i><br>
+                    <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Yuan_Temporal_Dynamic_Graph_ICCV_2017_paper.pdf" target="_blank">[<u>PDF</u>]</a>
+                    <a href="https://github.com/xiaolonw/CharadesDet" target="_blank">[<u>Dataset</u>]</a>
+                    <a href="bib/2017_iccv_TD_GraphLSTM.bib" target="_blank">[<u>BibTeX</u>]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2016_tcsvt_amin.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Adaptive Block Coding Order for Intra Prediction in HEVC</b><br>
+                    Amin Zheng, <b>Yuan Yuan</b>, Jiantao Zhou, Yuanfang Guo, Haitao Yang and Oscar C. Au<br>
+                    <i>IEEE Transaction on Circuits and Systems for Video Technology, vol.26, no.11, pp.2152-2158, Nov. (<b>TCSVT 2016</b>)</i><br>
+                    <a href="papers/paper_2016_TCSVT_amin.pdf" target="_blank">[<u>PDF</u>]</a><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2015_icassp_yuan.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Image Compression Via Dense Descriptors Assisted Synthesis</b><br>
+                    <b>Yuan Yuan</b>, Amin Zheng, Haitao Yang and Oscar C. Au<br>
+                    <i>International Conference on Acoustics, Speech and Signal Processing (<b>ICASSP 2015</b>)</i><br>
+                    <a href="papers/paper_2015_icassp_yuan.pdf" target="_blank">[<u>PDF</u>]</a><br>
+                    <b>Oral Presentation</b>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2015_icip_amin_mvf.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Motion Vector Fields Based Video Coding</b><br>
+                    Amin Zheng, <b>Yuan Yuan</b>, Hong Zhang, Haitao Yang, Pengfei Wan and Oscar C. Au<br>
+                    <i>International Conference on Image Processing (<b>ICIP 2015</b>)</i><br>
+                    <a href="papers/paper_2015_icip_amin_mvf.pdf" target="_blank">[<u>PDF</u>]</a><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2015_icip_amin_of.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Motion Estimation Via Hierarchical Block Matching and Graph Cut</b><br>
+                    Amin Zheng, <b>Yuan Yuan</b>, Sunil Prasad Jaiswal and Oscar C. Au<br>
+                    <i>International Conference on Image Processing (<b>ICIP 2015</b>)</i><br>
+                    <a href="papers/paper_2015_icip_amin_of.pdf" target="_blank">[<u>PDF</u>]</a><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2015_icip_yonggen.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Image Colorization Via Color Propagation and Rank Minimization</b><br>
+                    Yonggen Ling, Oscar C. Au, Jiahao Pang, Jin Zeng, <b>Yuan Yuan</b> and Amin Zheng<br>
+                    <i>International Conference on Image Processing (<b>ICIP 2015</b>)</i><br>
+                    <a href="papers/paper_2015_icip_yonggen_colorization.pdf" target="_blank">[<u>PDF</u>]</a><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2014_icassp_yuan.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Image Compression Via Sparse Reconstruction</b><br>
+                    <b>Yuan Yuan</b>, Oscar C. Au, Amin Zheng and Haitao Yang<br>
+                    <i>International Conference on Acoustics, Speech and Signal Processing (<b>ICASSP 2014</b>)</i><br>
+                    <a href="papers/paper_2014_icassp_yuan.pdf" target="_blank">[<u>PDF</u>]</a>
+                    <a href="papers/poster_2014_icassp_yuan.pdf" target="_blank">[<u>Poster</u>]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2014_icip_haiyan.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Natural Image Matting via Adaptive Local and Nonlocal Sample Clustering</b><br>
+                    Haiyan Yang, Oscar C. Au, <b>Yuan Yuan</b> and Wenxiu Sun<br>
+                    <i>International Conference on Image Processing (<b>ICIP 2014</b>)</i><br>
+                    <a href="papers/paper_2014_icip_haiyan_matting.pdf" target="_blank">[<u>PDF</u>]</a><br>
+                    <b>Top 10% Paper Award</b>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+
+            <!--Honors and Awards (Selected)-->
+            <h3 id="miscellaneous">
+              Honors and Awards (Selected)
+            </h3>
+            <ul>
+              <li>Ali Star, Alibaba Group, 2019.</li>
+              <li>Overseas Research Award for conducting research at Carnegie Mellon University, HKUST, 2016.</li>
+              <li>Meritorious Winner, Mathematical Contest in Modeling of America (MCM), 2011.</li>
+              <li>National Scholarship, Ministry of Education of P.R.China, 2009, 2010, 2011.</li>
+              <li>Microsoft Young Fellowship, Microsoft Research Asia, 2011.</li>
+            </ul>
+
+
+            <!--Honors and Awards (Selected)-->
+            <h3 id="miscellaneous">
+              Professional Services (Selected)
+            </h3>
+            <ul>
+              <li><b>PC Member</b></li>
+              AAAI Conference on Artificial Intelligence (AAAI), 2020, 2021 <br>
+              IEEE International Conference on Computer Vision (ICCV) workshop, the first workshop on statistic deep learning in computer vision, 2019
+              <li><b>Conference Reviewer</b></li>
+              Neural Information Processing Systems (NeurIPS), 2020 <br>
+              European Conference on Computer Vision (ECCV), 2020 <br>
+              IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017, 2018, 2019, 2020 <br>
+              AAAI Conference on Artificial Intelligence (AAAI), 2019, 2020 <br>
+              IEEE International Conference on Computer Vision (ICCV), 2017, 2019 <br>
+              International Joint Conferences on Artificial Intelligence (IJCAI), 2017 <br>
+              IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2014-2020 <br>
+              IEEE International Conference on Image Processing (ICIP), 2013, 2014, 2015 <br>
+              IEEE International Symposium on Circuits and Systems (ISCAS), 2013, 2014, 2015 <br>
+
+              <li><b>Journal Reviewer</b></li>
+              IEEE Transactions on Image Processing (TIP) <br>
+              IEEE Transactions on Circuits and Systems for Video Technology (TCSVT) <br>
+              IEEE Transactions on Multimedia (TMM) <br>
+              Pattern Recognition (PR) <br>
+              Computer Vision and Image Understanding (CVIU) <br>
+              Machine Vision and Applications (MVAP) <br>
+
+            </ul>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    var elm = document.querySelector('#sidebar');
+    var ms = new MenuSpy(elm, {
+      activeClass: 'is-active'
+    });
+  </script>
+  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=VjnfOejvIIrpggl9NSOiRcw0OJHJ0QGzEhq2kCXwP94"></script>
+
+</body>
+
+</html>
