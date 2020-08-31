@@ -114,8 +114,12 @@
 
             <!--Selected Publications-->
             <h3 id="publications">Selected Publications</h3>
-            <h5><a href="https://scholar.google.com/citations?user=9tI89HMAAAAJ">[Full List]</a></h5> <br>
-            <article class="columns">
+            <h5><a href="https://scholar.google.com/citations?user=9tI89HMAAAAJ" target="_blank">[Full List]</a>
+              <a href="javascript:void(0)" class="show-group" data-target="all">[Show All]</a>
+              <a href="javascript:void(0)" class="show-group" data-target="1">[Show group-1]</a>
+              <a href="javascript:void(0)" class="show-group" data-target="2">[Show group-2]</a>
+            </h5> <br>
+            <article class="columns group group-1">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2020_eccv_rf_diary.png">
@@ -145,7 +149,7 @@
             </article>
 
 
-            <article class="columns">
+            <article class="columns group group-1">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2020_cvpr_rf_reid.png">
@@ -169,7 +173,7 @@
               </div>
             </article>
 
-            <article class="columns">
+            <article class="columns group group-1">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2019_iclr_maan.jpg">
@@ -188,7 +192,7 @@
               </div>
             </article>
 
-            <article class="columns">
+            <article class="columns group group-1">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2019_jmlr_yueming.jpg">
@@ -206,7 +210,7 @@
               </div>
             </article>
 
-            <article class="columns">
+            <article class="columns group group-1">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2017_iccv_TD_GrapgLSTM.jpg">
@@ -226,7 +230,7 @@
               </div>
             </article>
 
-            <article class="columns">
+            <article class="columns group group-1">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2016_tcsvt_amin.png">
@@ -244,7 +248,7 @@
               </div>
             </article>
 
-            <article class="columns">
+            <article class="columns group group-1">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2015_icassp_yuan.png">
@@ -263,7 +267,7 @@
               </div>
             </article>
 
-            <article class="columns">
+            <article class="columns group group-1">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2015_icip_amin_mvf.png">
@@ -281,7 +285,7 @@
               </div>
             </article>
 
-            <article class="columns">
+            <article class="columns group group-2">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2015_icip_amin_of.png">
@@ -299,7 +303,7 @@
               </div>
             </article>
 
-            <article class="columns">
+            <article class="columns group group-2">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2015_icip_yonggen.jpg">
@@ -317,7 +321,7 @@
               </div>
             </article>
 
-            <article class="columns">
+            <article class="columns group group-2">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2014_icassp_yuan.png">
@@ -336,7 +340,7 @@
               </div>
             </article>
 
-            <article class="columns">
+            <article class="columns group group-2">
               <div class="column is-3">
                 <figure class="image">
                   <img src="images/publications/2014_icip_haiyan.png">
@@ -423,12 +427,21 @@
       activeClass: 'is-active'
     });
 
-
-
-
-
   </script>
-
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+      $('.show-group').on('click', function(){
+        var target = $(this).data('target');
+        if(target === 'all'){
+          $('.group').show();
+        }else if(target){
+          $('.group').hide();
+          $('.group-'+target).show();
+        }
+      });
+    })
+  </script>
 
 </body>
 
