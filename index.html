@@ -17,6 +17,12 @@
   <script src="js/menuspy.js"></script>
     <style>
   .red{color: #ff0000;font-style: normal;}
+      .content figure{
+        height: 8.5rem;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
 </style>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
 </head>
@@ -25,13 +31,13 @@
   <section class="section">
     <div class="container">
       <div class="columns">
-        <div class="column is-2">
+        <div class="column is-3">
           <div class="sticky">
-            <figure class="image is-256x256">
+            <figure class="image" style="width: 12rem;">
               <img class="is-rounded" src="images/psb3.jpg">
             </figure>
             <div class="content">
-              <h3>Yuan Yuan 袁园</h3>
+              <h3 style="margin-top: 1em">Yuan Yuan 袁园</h3>
               <h6>CSAIL, MIT</h6>
               <h6>32-G916, 32 Vassar St.</h6>
               <h6>Cambridge, MA 02139</h6>
@@ -39,7 +45,7 @@
             <!-- details -->
             <div class="details">
               <h3>EMAIL</h3>
-              <p><a href="mailto:miayuan@mit.edu">miayuan<br>[at]mit[dot]edu</a></p>
+              <p><a href="mailto:miayuan@mit.edu">miayuan[at]mit[dot]edu</a></p>
             </div>
             <!-- social network icons -->
             <div class="social">
