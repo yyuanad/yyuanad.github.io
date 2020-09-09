@@ -16,12 +16,32 @@
   <script defer src="font-awesome-5.9.0/js/fontawesome.min.js"></script>
   <script src="js/menuspy.js"></script>
     <style>
-  .red{color: #ff0000;font-style: normal;}
-      .content figure{
+      .red {
+        color: #ff0000;
+        font-style: normal;
+      }
+
+      .content figure {
         height: 8.5rem;
         display: flex;
         align-items: center;
         overflow: hidden;
+        border: solid #d2d2d2 1px;
+      }
+
+      #sidebar {
+        width: 80%;
+      }
+
+      <!--#sidebar .menu-list a.is-active {-->
+      <!--  background-color: #9dd5d8;-->
+      <!--}-->
+
+      @media screen and (min-width: 769px), print {
+        .column.is-2_5, .column.is-2-tablet {
+          flex: none;
+          width: 20%;
+        }
       }
 </style>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
@@ -31,9 +51,9 @@
   <section class="section">
     <div class="container">
       <div class="columns">
-        <div class="column is-3">
+        <div class="column is-2_5">
           <div class="sticky">
-            <figure class="image" style="width: 12rem;">
+            <figure class="image" style="width: 11.5rem;">
               <img class="is-rounded" src="images/psb3.jpg">
             </figure>
             <div class="content">
@@ -75,7 +95,7 @@
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#miscellaneous">Miscellaneous</a></li>
               </ul>
-              <div class="column" style="width: 50%">
+              <div class="column" style="width: 40%">
                 <script type='text/javascript' id='clstr_globe' src='//cdn.clustrmaps.com/globe.js?d=VjnfOejvIIrpggl9NSOiRcw0OJHJ0QGzEhq2kCXwP94'></script>
               </div>
             </div>
@@ -391,7 +411,7 @@
               Neural Information Processing Systems (NeurIPS), 2020 <br>
               European Conference on Computer Vision (ECCV), 2020 <br>
               IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017, 2018, 2019, 2020 <br>
-              AAAI Conference on Artificial Intelligence (AAAI), 2019, 2020 <br>
+              AAAI Conference on Artificial Intelligence (AAAI), 2019, 2020, 2021 <br>
               IEEE International Conference on Computer Vision (ICCV), 2017, 2019 <br>
               International Joint Conferences on Artificial Intelligence (IJCAI), 2017 <br>
               IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2014-2020 <br>
