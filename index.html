@@ -33,9 +33,9 @@
         width: 80%;
       }
 
-      <!--#sidebar .menu-list a.is-active {-->
-      <!--  background-color: #9dd5d8;-->
-      <!--}-->
+      #sidebar .menu-list a.is-active {
+        background-color: #9dd5d8;
+      }
 
       @media screen and (min-width: 769px), print {
         .column.is-2_5, .column.is-2-tablet {
@@ -53,7 +53,7 @@
       <div class="columns">
         <div class="column is-2_5">
           <div class="sticky">
-            <figure class="image" style="width: 11.5rem;">
+            <figure class="image" style="width: 10rem;">
               <img class="is-rounded" src="images/psb3.jpg">
             </figure>
             <div class="content">
@@ -120,7 +120,7 @@
 
 
             <!--Research Interests-->
-            <h3 id="intro">Research Interests</h3>
+            <h3 id="research">Research Interests</h3>
             <ul>
               <li>Learning-based wireless sensing, with application to privacy-preserved healthcare and human sensing</li>
               <li>General video understanding, including video object detection, temporal action localization and human action recognition</li>
@@ -386,7 +386,6 @@
             </article>
 
 
-            <!--Honors and Awards (Selected)-->
             <h3 id="miscellaneous">
               Honors and Awards (Selected)
             </h3>
@@ -399,8 +398,7 @@
             </ul>
 
 
-            <!--Honors and Awards (Selected)-->
-            <h3 id="miscellaneous">
+            <h3 >
               Professional Services (Selected)
             </h3>
             <ul>
@@ -411,7 +409,7 @@
               Neural Information Processing Systems (NeurIPS), 2020 <br>
               European Conference on Computer Vision (ECCV), 2020 <br>
               IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017, 2018, 2019, 2020 <br>
-              AAAI Conference on Artificial Intelligence (AAAI), 2019, 2020, 2021 <br>
+              AAAI Conference on Artificial Intelligence (AAAI), 2019, 2020 <br>
               IEEE International Conference on Computer Vision (ICCV), 2017, 2019 <br>
               International Joint Conferences on Artificial Intelligence (IJCAI), 2017 <br>
               IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2014-2020 <br>
@@ -448,12 +446,62 @@
 
 
   <script>
-    var elm = document.querySelector('#sidebar');
-    var ms = new MenuSpy(elm, {
-      activeClass: 'is-active'
+
+    var $hashList = $('.menu-list a'), offsetList, maxScrollHeight;
+
+    $('#sidebar').on('click', 'a', function(){
+      activate($(this))
     });
+    
+    $(window).on('resize', debounce(calculateBoundary, 300));
 
+    $(document).on('scroll', debounce(judgeScroll, 300));
 
+    calculateBoundary();
+    judgeScroll();
+    
+    function  calculateBoundary() {
+      offsetList = $hashList.map(function(idx, ele){
+        return $(ele.hash).offset().top
+      });
+      maxScrollHeight = $(document).height() - $(window).height()
+    }
+    
+    function judgeScroll() {
+      var tps = $("html").scrollTop()
+              ? $("html").scrollTop()
+              : $("body").scrollTop(),
+              len = offsetList.length;
+      if(tps >= maxScrollHeight-10){
+        activate($hashList.eq(len-1));
+        return
+      }
+      for(var i=0; i<len; i++){
+       if(tps+50<offsetList[i]){
+          activate($hashList.eq(Math.max(0,i-1)));
+          return
+        }
+      }
+    }
+
+    function activate(ele){
+      $hashList.removeClass('is-active');
+      ele.addClass('is-active');
+    }
+
+    function debounce(fn, delay) {
+      var timeout = null;
+      return function () {
+        var args = arguments;
+        var context = this;
+        if (!timeout) {
+          timeout = setTimeout(function () {
+            timeout = 0;
+            return fn.apply(context, args);
+          }, delay);
+        }
+      };
+    }
 
 
 
