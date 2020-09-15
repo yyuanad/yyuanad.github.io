@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans';
+    /*font-family: 'Open Sans';*/
     scroll-behavior: smooth
 }
 
@@ -29,7 +29,5 @@ body {
     font-size: 1em;
 }
 
-a:link { color: rgb(0, 0, 100);text-decoration: none; }
-a:hover { color: rgb(200, 0, 0) }
+a:hover { color: rgb(200, 0, 0)!important; }
 a:active { color: rgb(255, 0, 102) }
-a:visited{color: rgb(0, 0, 100)}
