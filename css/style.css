@@ -29,5 +29,10 @@ body {
     font-size: 1em;
 }
 
-a:hover { color: rgb(200, 0, 0)!important; }
+.details a:hover, .right-panel a:hover { color: rgb(200, 0, 0); }
 a:active { color: rgb(255, 0, 102) }
+#sidebar a:hover{text-decoration: none;}
+.social a:hover{text-decoration: none; color: #3273dc; }
+.social a:hover svg{transform: scale(1.1);}
+.dark{color: #4a4a4a!important;}
+.dark:hover{color: #4a4a4a!important;}
