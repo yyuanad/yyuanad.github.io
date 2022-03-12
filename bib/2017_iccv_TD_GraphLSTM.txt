@@ -1,0 +1,8 @@
+@inproceedings{YuanyuanICCV2017,
+    Author = {Yuan Yuan and Xiaodan Liang and Xiaolong Wang and Dit-Yan Yeung and Abhinav Gupta},
+    Title = {Temporal Dynamic Graph LSTM for Action-driven Video Object Detection},
+    Booktitle = {ICCV},
+    Year = {2017},
+}
+
+

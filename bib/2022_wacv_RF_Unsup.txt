@@ -1,0 +1,8 @@
+@InProceedings{Li_2022_WACV,
+    author    = {Li, Tianhong and Fan, Lijie and Yuan, Yuan and Katabi, Dina},
+    title     = {Unsupervised Learning for Human Sensing Using Radio Signals},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {January},
+    year      = {2022},
+    pages     = {3288-3297}
+}
