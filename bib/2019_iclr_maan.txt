@@ -1,0 +1,6 @@
+@InProceedings{yuan2019marginalized,
+  author={Yuan, Yuan and Lyu, Yueming and Shen, Xi and Tsang, Ivor W and Yeung, Dit-Yan},
+  title={Marginalized average attentional network for weakly-supervised learning},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2019}
+}
