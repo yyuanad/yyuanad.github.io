@@ -1,38 +1,60 @@
 body {
-    /*font-family: 'Open Sans';*/
-    scroll-behavior: smooth
+  /*font-family: 'Open Sans';*/
+  scroll-behavior: smooth;
 }
 
-.details h3{
-    font-weight:600;
-    font-size:1em;
-    color:#000;
+.details h3 {
+  font-weight: 600;
+  font-size: 1em;
+  color: #000;
 }
-
 
 .sticky {
-    position: sticky;
-    top: 30px;
+  position: sticky;
+  top: 30px;
 }
 
-.social{
-    /*float: left;*/
-    padding-bottom: 2em;
-    padding-top: 1em;
-    font-size: 1em;
+.social {
+  /*float: left;*/
+  padding-bottom: 2em;
+  padding-top: 1em;
+  font-size: 1em;
 }
 
-.sidebar{
-    /*float: left;*/
-    padding-bottom: 2em;
-    padding-top: 1em;
-    font-size: 1em;
+.sidebar {
+  /*float: left;*/
+  padding-bottom: 2em;
+  padding-top: 1em;
+  font-size: 1em;
 }
 
-.details a:hover, .right-panel a:hover { color: rgb(200, 0, 0); }
-a:active { color: rgb(255, 0, 102) }
-#sidebar a:hover{text-decoration: none;}
-.social a:hover{text-decoration: none; color: #3273dc; }
-.social a:hover svg{transform: scale(1.1);}
-.dark{color: #4a4a4a!important;}
-.dark:hover{color: #4a4a4a!important;}
+.details a:hover,
+.right-panel a:hover {
+  color: rgb(200, 0, 0);
+}
+a:active {
+  color: rgb(255, 0, 102);
+}
+#sidebar a:hover {
+  text-decoration: none;
+}
+.social a:hover {
+  text-decoration: none;
+  color: #3273dc;
+}
+.social a:hover svg {
+  transform: scale(1.1);
+}
+.dark {
+  color: #4a4a4a !important;
+}
+.dark:hover {
+  color: #4a4a4a !important;
+}
+i.email {
+  background-image: url(../images/svg/email.svg);
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+  display: inline-block;
+}
