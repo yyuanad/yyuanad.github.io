@@ -2,6 +2,7 @@ let publicationsListArray = [
   {
     time: "2022.12.1",
     topic: "High Priority",
+    selected: true,
     content: ` <article class="columns">
     <div class="column is-3">
       <figure class="image">
@@ -24,6 +25,7 @@ let publicationsListArray = [
   {
     time: "2022.11.1",
     topic: "Low Priority",
+    selected: false,
     content: ` <article class="columns">
     <div class="column is-3">
       <figure class="image">
@@ -80,6 +82,7 @@ let publicationsListArray = [
   {
     time: "2022.10.1",
     topic: "High Priority",
+    selected: true,
     content: `<article class="columns">
     <div class="column is-3">
       <figure class="image">
@@ -112,9 +115,9 @@ let publicationsListArray = [
 let topicList = ["High Priority", "Low Priority"];
 
 $(document).ready(function () {
-  function renderPublications() {
+  function renderPublications(tempList) {
     $("#publications-container").html(
-      publicationsListArray.reduce(function (pre, cur) {
+      (tempList || publicationsListArray).reduce(function (pre, cur) {
         return pre + cur.content;
       }, "")
     );
@@ -130,24 +133,32 @@ $(document).ready(function () {
             return `<a href='#${topic.replace(
               /\s/g,
               ""
-            )}' class='publications-sort-by-topic'>${topic}<a>`;
+            )}' class='publications-show-by-topic'>${topic}<a>`;
           } else {
             return `<a href='#${topic.replace(
               /\s/g,
               ""
-            )}' class='publications-sort-by-topic'>${topic}<a> / `;
+            )}' class='publications-show-by-topic'>${topic}<a> / `;
           }
         })
         .join("")
   );
 
-  $("#publications-sort-by-time").click(function () {
+  $("#publications-show-by-time").click(function () {
     publicationsListArray.sort((a, b) => new Date(a.time) - new Date(b.time));
 
     renderPublications();
   });
 
-  $("#publications-sort-by-topic, .publications-sort-by-topic").click(
+  $("#publications-selected").click(function () {
+    renderPublications(
+      publicationsListArray
+        .filter((item) => item.selected)
+        .sort((a, b) => new Date(a.time) - new Date(b.time))
+    );
+  });
+
+  $("#publications-show-by-topic, .publications-show-by-topic").click(
     function () {
       // publicationsListArray.sort((a, b) => a.topic.localeCompare(b.topic));
       // renderPublications();
