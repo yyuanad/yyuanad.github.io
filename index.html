@@ -75,6 +75,7 @@
       }
 </style>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="./js/publications.js"></script>
 </head>
 
 
@@ -189,8 +190,12 @@
 
 
             <!--Selected Publications-->
-            <h3 id="publications">Selected Publications <span style="font-size: 1rem;margin-left: 1rem;position: relative;bottom: .1rem;"><a href="https://scholar.google.com/citations?user=9tI89HMAAAAJ" target="_blank">[Full List]</a></span></h3> 
+            <h3 id="publications">Selected Publications <span style="font-size: 1rem;margin-left: 1rem;position: relative;bottom: .1rem;"><a href="https://scholar.google.com/citations?user=9tI89HMAAAAJ" target="_blank">[Full List]</a>
+              <a href="javascript:void(0);" id="publications-sort-by-time">[Sort By Time]</a>
+              <a href="javascript:void(0);" id="publications-sort-by-topic">[Sort By Topic]</a>
+            </span></h3> 
 
+            <div id="publications-container"></div>
 
             <article class="columns">
               <div class="column is-3">
