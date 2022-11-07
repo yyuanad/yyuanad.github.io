@@ -1,7 +1,7 @@
 let publicationsListArray = [
   {
     time: "2022.12.1",
-    topic: "High Priority",
+    topic: ["High Priority", "Low Priority"],
     selected: true,
     content: ` <article class="columns">
     <div class="column is-3">
@@ -24,7 +24,7 @@ let publicationsListArray = [
   },
   {
     time: "2022.11.1",
-    topic: "Low Priority",
+    topic: ["Low Priority"],
     selected: false,
     content: ` <article class="columns">
     <div class="column is-3">
@@ -81,7 +81,7 @@ let publicationsListArray = [
   },
   {
     time: "2022.10.1",
-    topic: "High Priority",
+    topic: ["High Priority", "Low Priority"],
     selected: true,
     content: `<article class="columns">
     <div class="column is-3">
@@ -160,9 +160,6 @@ $(document).ready(function () {
 
   $("#publications-show-by-topic, .publications-show-by-topic").click(
     function () {
-      // publicationsListArray.sort((a, b) => a.topic.localeCompare(b.topic));
-      // renderPublications();
-
       let wholeHtmlString = "";
       topicList.forEach((topic) => {
         wholeHtmlString += `<h4 class='topic-title' id='${topic.replace(
@@ -170,7 +167,7 @@ $(document).ready(function () {
           ""
         )}'>${topic}</h4>`;
         wholeHtmlString += publicationsListArray
-          .filter((item) => item.topic === topic)
+          .filter((item) => item.topic.includes(topic))
           .reduce((pre, cur) => {
             return pre + cur.content;
           }, "");
