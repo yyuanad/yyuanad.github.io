@@ -1,7 +1,7 @@
-var publicationsListArray = [
+let publicationsListArray = [
   {
     time: "2022.12.1",
-    topic: "a_test",
+    topic: "High Priority",
     content: ` <article class="columns">
     <div class="column is-3">
       <figure class="image">
@@ -23,7 +23,7 @@ var publicationsListArray = [
   },
   {
     time: "2022.11.1",
-    topic: "c_test",
+    topic: "Low Priority",
     content: ` <article class="columns">
     <div class="column is-3">
       <figure class="image">
@@ -79,7 +79,7 @@ var publicationsListArray = [
   },
   {
     time: "2022.10.1",
-    topic: "b_test",
+    topic: "High Priority",
     content: `<article class="columns">
     <div class="column is-3">
       <figure class="image">
@@ -109,6 +109,8 @@ var publicationsListArray = [
   },
 ];
 
+let topicList = ["High Priority", "Low Priority"];
+
 $(document).ready(function () {
   function renderPublications() {
     $("#publications-container").html(
@@ -120,14 +122,49 @@ $(document).ready(function () {
 
   renderPublications();
 
+  $("#research-topics").html(
+    "Research Topics: " +
+      topicList
+        .map((topic, index) => {
+          if (index === topicList.length - 1) {
+            return `<a href='#${topic.replace(
+              /\s/g,
+              ""
+            )}' class='publications-sort-by-topic'>${topic}<a>`;
+          } else {
+            return `<a href='#${topic.replace(
+              /\s/g,
+              ""
+            )}' class='publications-sort-by-topic'>${topic}<a> / `;
+          }
+        })
+        .join("")
+  );
+
   $("#publications-sort-by-time").click(function () {
     publicationsListArray.sort((a, b) => new Date(a.time) - new Date(b.time));
 
     renderPublications();
   });
 
-  $("#publications-sort-by-topic").click(function () {
-    publicationsListArray.sort((a, b) => a.topic.localeCompare(b.topic));
-    renderPublications();
-  });
+  $("#publications-sort-by-topic, .publications-sort-by-topic").click(
+    function () {
+      // publicationsListArray.sort((a, b) => a.topic.localeCompare(b.topic));
+      // renderPublications();
+
+      let wholeHtmlString = "";
+      topicList.forEach((topic) => {
+        wholeHtmlString += `<h4 class='topic-title' id='${topic.replace(
+          /\s/g,
+          ""
+        )}'>${topic}</h4>`;
+        wholeHtmlString += publicationsListArray
+          .filter((item) => item.topic === topic)
+          .reduce((pre, cur) => {
+            return pre + cur.content;
+          }, "");
+      });
+      $("#publications-container").html(wholeHtmlString);
+    }
+  );
 });

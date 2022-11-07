@@ -16,6 +16,7 @@
   <script defer src="font-awesome-5.9.0/js/brands.min.js"></script>
   <script defer src="font-awesome-5.9.0/js/fontawesome.min.js"></script>
     <style>
+      html, body { scroll-behavior:smooth; }
       .red {
         color: #ff0000;
         font-style: normal;
@@ -72,6 +73,10 @@
 
       .partial-visible li:nth-child(n+20){
         display: none;
+      }
+
+      .topic-title{
+        padding-left: 0.4em;
       }
 </style>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
@@ -190,10 +195,11 @@
 
 
             <!--Selected Publications-->
-            <h3 id="publications">Selected Publications <span style="font-size: 1rem;margin-left: 1rem;position: relative;bottom: .1rem;"><a href="https://scholar.google.com/citations?user=9tI89HMAAAAJ" target="_blank">[Full List]</a>
+            <h3 id="publications" style="margin-bottom: 0.4em!important;">Selected Publications <span style="font-size: 1rem;margin-left: 1rem;position: relative;bottom: .1rem;"><a href="https://scholar.google.com/citations?user=9tI89HMAAAAJ" target="_blank">[Full List]</a>
               <a href="javascript:void(0);" id="publications-sort-by-time">[Sort By Time]</a>
               <a href="javascript:void(0);" id="publications-sort-by-topic">[Sort By Topic]</a>
             </span></h3> 
+            <div id="research-topics" style="margin-bottom: 1em;"></div>
 
             <div id="publications-container"></div>
 
