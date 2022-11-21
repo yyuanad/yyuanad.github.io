@@ -74,7 +74,10 @@
         display: none;
       }
 
-      .partial-visible .show-more:nth-child(n+20){
+      .partial-visible .show-more:nth-child(n+21){
+        display: block!important;
+      }
+      .news-list:not(.partial-visible) .show-more{
         display: block!important;
       }
 </style>
@@ -160,7 +163,7 @@
             <h3 id="news">
               News
             </h3>
-            <ul class="partial-visible">
+            <ul class="partial-visible news-list">
               <li><span>[10/2022] Attended the <a href="https://conferences.nature.com/event/0b87c6fb-30cf-495a-9da0-88b2a9bf0681/summary" target="_blank">Nature Conference on Medicine in a Virtual Age.</a></li>
               <li><span>[08/2022] Our paper on <a href="https://www.nature.com/articles/s41591-022-01932-x" target="_blank">AI-based biomarker for Parkinson's disease</a> is published at Nature Medicine.</li>
               <li><span>[04/2022] Our poster has been accepted at <a href="https://www.mitmgb.ai/" target="_blank">AI Cures 2022.</a></li>
