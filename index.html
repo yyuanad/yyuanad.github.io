@@ -92,7 +92,7 @@
         <div class="column is-2_5">
           <div class="sticky">
             <figure class="image" style="width: 10rem;max-width: 100%;">
-              <img class="is-rounded" src="images/psb4.jpg">
+              <img class="is-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" id="avatar">
             </figure>
             <div class="content">
               <h3 style="margin-top: 1em">Yuan Yuan 袁园</h3>
@@ -933,6 +933,9 @@
         $showMoreBtn.text('show more').parent().addClass('partial-visible');
       }
     })
+
+    var psbCount = 5;
+    $('#avatar').attr('src', './images/psb'+(1+(Math.random()*100>>0)%psbCount)+'.jpg')
 
 
 
