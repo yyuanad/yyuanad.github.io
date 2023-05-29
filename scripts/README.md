@@ -10,6 +10,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 nvm install 16.18
 ```
 
+理论上会自动选择 `node: 16.18`
+如果执行后续指令报错, 找不到 `node`, 可以执行
+
+```
+nvm use 16
+```
+
 # 安装 yarn
 
 ```
@@ -17,7 +24,7 @@ corepack enable
 corepack prepare yarn@1.22.19 --activate
 ```
 
-# 在根目录执行
+# 在本项目根目录执行
 
 ```
 yarn install
