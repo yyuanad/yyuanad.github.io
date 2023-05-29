@@ -1,0 +1,15 @@
+{
+  "name": "yyuanad.github.io",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/yyuanad/yyuanad.github.io.git",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "update-commit-timestamp": "node scripts/recordCommitTs.js"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3"
+  }
+}
