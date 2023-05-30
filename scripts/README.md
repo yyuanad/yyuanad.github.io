@@ -31,3 +31,18 @@ yarn install
 ```
 
 之后每次提交时都会自动更新 `index.html` 里的更新时间
+
+# 提交报错
+
+如果你使用的是 `vscode` 的 `source control` 面板进行代码的提交, 并遇到如下错误:
+
+```
+Git: .husky/pre-commit: line 4: yarn: command not found
+```
+
+请创建如下文件 `~/.huskyrc`, 内容如下:
+
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+```
