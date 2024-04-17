@@ -1,0 +1,2 @@
+Abstract: Predictive learning has been a long-standing topic in computer vision and has gain increased attention recently due to the success of large language models. This lecture will introduce several pivotal studies within this domain. We begin with image inpainting — a technique vital for understanding context and filling missing information. We will then see how predictive learning could facilitate unsupervised representation learning. Finally, we will introduce how can we use predictive learning to generate novel images.
+
