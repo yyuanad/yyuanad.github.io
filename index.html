@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <!-- Bulma Version 0.7.5-->
   <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
-  <link href='css/style.css?_t=20260902b' rel='stylesheet' type='text/css'>
+  <link href='css/style.css?_t=20260902c' rel='stylesheet' type='text/css'>
   <script defer src="font-awesome-5.9.0/js/brands.min.js"></script>
   <script defer src="font-awesome-5.9.0/js/fontawesome.min.js"></script>
     <style>
@@ -63,7 +63,7 @@
       @media screen and (min-width: 769px), print {
         .column.is-2_5, .column.is-2-tablet {
           flex: none;
-          width: 20%;
+          width: 21%;
         }
       }
 
@@ -99,27 +99,32 @@
     <div class="container">
       <div class="columns">
         <div class="column is-2_5">
-          <div class="sticky">
+          <div class="sticky profile-sidebar">
             <figure class="image" style="width: 10rem;max-width: 100%;">
               <img class="is-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" id="avatar">
             </figure>
-            <div class="content">
-              <h3 style="margin-top: 1em">Yuan Yuan 袁园</h3>
-              <h6>Assistant Professor</h6>
-              <h6>Department of Computer Science</h6>
-              <h6>Boston College</h6>
-              <h6>Room 528E, 245 Beacon St., Chestnut Hill, MA 02467</h6>
+            <div class="content profile-summary">
+              <h3 class="profile-name"><span>Yuan Yuan</span><span class="profile-name-cn">袁园</span></h3>
+              <h6 class="profile-role">Assistant Professor</h6>
+              <div class="profile-meta">
+                <p>Department of Computer Science</p>
+                <p>Boston College</p>
+                <p class="profile-address">
+                  <svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+                  <span>Room 528E, 245 Beacon St.<br>Chestnut Hill, MA 02467</span>
+                </p>
+              </div>
             </div>
 
             <!-- details -->
-            <div class="details">
-              <h3>Emails:</h3>
+            <div class="details profile-contact">
+              <h3><svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span>Emails:</span></h3>
               <p><a href="mailto:yuanyua@bc.edu">yuanyua[at]bc[dot]edu</a></p>
               <p><a href="mailto:miayuan@mit.edu" style="text-decoration: line-through;">miayuan[at]mit[dot]edu</a></p>
               <p><a href="mailto:miayuany@gmail.com">miayuany[at]gmail[dot]com</a></p>
             </div>
             <!-- social network icons -->
-            <div class="social">
+            <div class="social profile-social">
               <a href="https://github.com/yyuanad" target="_blank">
                 <span class="fab fa-github fa-2x" style="display:inline; text-decoration: none"></span>
               </a>

@@ -28,6 +28,124 @@ body {
   font-size: 1em;
 }
 
+.profile-sidebar {
+  color: #34373c;
+  font-family: "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", Arial,
+    "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.content h3.profile-name {
+  display: flex;
+  align-items: baseline;
+  gap: 0.28em;
+  margin: 1.25rem 0 1.15rem !important;
+  color: #292c31;
+  font-size: 1.5rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.profile-name-cn {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.86em;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.content h6.profile-role {
+  margin: 0 0 0.8rem;
+  color: #373b40;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.content .profile-meta {
+  color: #5b6067;
+  font-size: 0.91rem;
+  font-weight: 450;
+  line-height: 1.42;
+}
+
+.content .profile-meta p {
+  margin: 0 0 0.32rem;
+}
+
+.content .profile-meta .profile-address {
+  display: flex;
+  gap: 0.42rem;
+  align-items: flex-start;
+  margin-top: 0.92rem;
+}
+
+.profile-icon {
+  flex: 0 0 auto;
+  width: 0.82rem;
+  height: 0.82rem;
+  margin-top: 0.18rem;
+  color: #858a91;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.profile-contact {
+  margin-top: 1.25rem;
+}
+
+.profile-contact h3 {
+  display: flex;
+  gap: 0.42rem;
+  align-items: center;
+  margin: 0 0 0.48rem;
+  color: #5d6269;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.profile-contact h3 .profile-icon {
+  margin-top: 0;
+}
+
+.profile-contact p {
+  margin: 0.14rem 0;
+  padding-left: 1.24rem;
+  font-size: 0.89rem;
+  line-height: 1.42;
+}
+
+.profile-contact p:nth-of-type(2) {
+  opacity: 0.52;
+}
+
+.profile-social {
+  display: flex;
+  gap: 0.42rem;
+  padding: 0.85rem 0 1.55rem;
+  font-size: 0.88em;
+}
+
+#sidebar .menu-label {
+  margin-bottom: 0.65rem;
+  color: #5d6269;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+#sidebar .menu-list a {
+  padding: 0.42rem 0.68rem;
+  border-radius: 3px;
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
 .details a:hover,
 .right-panel a:hover {
   color: rgb(200, 0, 0);
