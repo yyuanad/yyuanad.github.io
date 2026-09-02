@@ -51,6 +51,37 @@ a:active {
 .dark:hover {
   color: #4a4a4a !important;
 }
+
+.content a.teaching-course-link {
+  color: #3273dc;
+  font-family: "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  text-decoration: none;
+}
+
+.content a.teaching-course-link:hover,
+.content a.teaching-course-link:focus {
+  color: rgb(200, 0, 0);
+  text-decoration: none;
+}
+
+.teaching-school {
+  color: #6b6f75;
+  font-weight: 500;
+}
+
+.teaching-item-title {
+  color: #303338;
+  font-weight: 600;
+}
+
+.content a.teaching-item-title:hover,
+.content a.teaching-item-title:focus {
+  color: rgb(200, 0, 0);
+}
+
 i.email {
   background-image: url(../images/svg/email.svg);
   width: 16px;
