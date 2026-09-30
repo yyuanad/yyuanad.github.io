@@ -1178,7 +1178,7 @@
         © 2020-2025 Yuan Yuan. Last updated: Oct 15, 2024.
       </div>
       <div id="visitor-counter" class="visitor-counter">
-        <a class="visitor-counter-badge" href="https://busuanzi.ibruce.info/" target="_blank" rel="noopener" aria-label="Total page views, powered by Busuanzi">
+        <a class="visitor-counter-badge" href="https://busuanzi.ibruce.info/" target="_blank" rel="noopener" aria-label="Page views including an initial baseline of 50,000, powered by Busuanzi" title="Includes an initial baseline of 50,000 plus recorded page views.">
           <span class="visitor-counter-ballet" aria-hidden="true">🩰</span>
           <span id="visitor-counter-digits" class="visitor-counter-digits" hidden></span>
           <span id="busuanzi_container_site_pv" style="display:none"><span id="busuanzi_value_site_pv"></span> <span class="visitor-counter-label">page views</span></span>
@@ -1288,7 +1288,9 @@
     (function () {
       var status = document.getElementById('visitor-counter-status');
       var digits = document.getElementById('visitor-counter-digits');
+      var initialPageViews = 50000;
       function renderDigits(count) {
+        count = String(initialPageViews + Number(count));
         digits.replaceChildren();
         count.split('').forEach(function (number) {
           var digit = document.createElement('span');
@@ -1296,11 +1298,11 @@
           digit.textContent = number;
           digits.appendChild(digit);
         });
-        digits.setAttribute('aria-label', count + ' page views');
+        digits.setAttribute('aria-label', count + ' page views, including an initial baseline of 50,000');
         digits.hidden = false;
       }
       if (location.hostname !== 'yyuanad.github.io') {
-        renderDigits('7662');
+        renderDigits('0');
         status.textContent = 'Style preview · sample count';
         return;
       }
