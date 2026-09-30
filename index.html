@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <!-- Bulma Version 0.7.5-->
   <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
-  <link href='css/style.css?_t=20260930-publication-icons' rel='stylesheet' type='text/css'>
+  <link href='css/style.css?_t=20260930-ballet-counter' rel='stylesheet' type='text/css'>
   <script defer src="font-awesome-5.9.0/js/brands.min.js"></script>
   <script defer src="font-awesome-5.9.0/js/fontawesome.min.js"></script>
     <style>
@@ -228,6 +228,7 @@
               News
             </h3>
             <ul class="partial-visible news-list">
+              <li><span>[09/2026] Excited to receive an <a href="https://reporter.nih.gov/project-details/11430827" target="_blank" rel="noopener"><b>NIH R01 Award</b></a> as Co-Investigator, together with PI <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/engineering/people/faculty-directory/bryan-ranger.html" target="_blank" rel="noopener">Bryan Ranger</a> and our collaborators, to advance AI-enabled ultrasound for neonatal growth and nutritional assessment.</span></li>
               <li><span>[11/2024] We are thrilled to have <a href="https://zt-yang.com/" target="_blank">Zhutian Yang</a> from MIT CSAIL give a talk titled <a href="talk/202411_ZhutianYang_Robotics.png" target="_blank"><span style="color: #33A6B8;">"Generalizable Algorithms for Long-Horizon Manipulation in Complex Environments by Integrating Deep Learning and Planning-Based Approaches"</span></a>.</li>
               <li><span>[11/2024] We are thrilled to have <a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" target="_blank">Hao He</a> from MIT CSAIL give a talk titled <a href="talk/202411_HaoHe_Health.png" target="_blank"><span style="color: #33A6B8;">"Respiratory Intelligence: What Can AI Learn About Your Health from Your Breathing"</span></a>.</li>
               <li><span>[11/2024] We are thrilled to have <a href="https://yifeiwang77.com/" target="_blank">Yifei Wang</a> from MIT CSAIL give a talk titled <a href="talk/202411_YifeiWang_Test Time SSL.png" target="_blank"><span style="color: #33A6B8;">"Towards Test-time Self-supervised Learning"</span></a>.</li>
@@ -1143,6 +1144,11 @@
             <h3 id="miscellaneous">
               Selected Honors and Awards
             </h3>
+            <h4>Grants</h4>
+            <ul>
+              <li><a href="https://reporter.nih.gov/project-details/11430827" target="_blank" rel="noopener">NIH R01 Award</a> ($3.17M for five years), Co-Investigator, 2026–2031 (PI: <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/engineering/people/faculty-directory/bryan-ranger.html" target="_blank" rel="noopener">Bryan Ranger</a>).<br>Advancing Neonatal Health: AI-enabled Ultrasound for Enhanced Growth and Nutritional Assessment.</li>
+            </ul>
+            <h4>Honors and Awards</h4>
             <ul>
               <li>Rising Stars in AI Symposium 2023 at KAUST, 2023. (Being selected to give a talk, but unable to attend in person due to visa issues)</li>
               <li>2022 Top Ten Notable Advances in Medicine, Nature Medicine, 2022. [<a href="https://www.nature.com/articles/s41591-022-02146-x" target="_blank" rel="noopener" class="teaching-course-link">Details</a>]</li>
@@ -1170,6 +1176,14 @@
       <br><hr>
       <div class="row" style="text-align: center">
         © 2020-2025 Yuan Yuan. Last updated: Oct 15, 2024.
+      </div>
+      <div id="visitor-counter" class="visitor-counter">
+        <a class="visitor-counter-badge" href="https://busuanzi.ibruce.info/" target="_blank" rel="noopener" aria-label="Total page views, powered by Busuanzi">
+          <span class="visitor-counter-ballet" aria-hidden="true">🩰</span>
+          <span id="busuanzi_container_site_pv" style="display:none"><span id="busuanzi_value_site_pv"></span> <span class="visitor-counter-label">page views</span></span>
+          <span id="visitor-counter-status">Page views unavailable</span>
+          <span class="visitor-counter-sparkle" aria-hidden="true">✧</span>
+        </a>
       </div>
     </footer>
   </section>
@@ -1268,6 +1282,33 @@
         })
         .catch(function () { /* Keep the Star link usable when counts are unavailable. */ });
     });
+  </script>
+
+  <script>
+    (function () {
+      var status = document.getElementById('visitor-counter-status');
+      if (location.hostname !== 'yyuanad.github.io') {
+        status.textContent = '— page views (preview)';
+        return;
+      }
+      status.textContent = 'Loading page views…';
+      var value = document.getElementById('busuanzi_value_site_pv');
+      var observer = new MutationObserver(function () {
+        if (/^\d+$/.test(value.textContent.trim())) {
+          status.hidden = true;
+          observer.disconnect();
+        }
+      });
+      observer.observe(value, {childList:true, subtree:true, characterData:true});
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js';
+      script.onerror = function () { status.textContent = 'Page views unavailable'; };
+      document.body.appendChild(script);
+      setTimeout(function () {
+        if (!status.hidden) status.textContent = 'Page views unavailable';
+      }, 10000);
+    }());
   </script>
 
 </body>
