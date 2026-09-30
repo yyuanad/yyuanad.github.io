@@ -282,8 +282,69 @@ a:active {
 
 i.email {
   background-image: url(../images/svg/email.svg);
-  width: 16px;
-  height: 16px;
-  background-size: cover;
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
   display: inline-block;
+  margin-left: 2px;
+  vertical-align: 0.1em;
 }
+
+/* SDPose publication previews and live model download badge. */
+.sdpose-previews {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3px;
+  width: 90%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.sdpose-previews img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.sdpose-downloads {
+  display: inline-block;
+  margin-top: 8px;
+}
+.sdpose-downloads img {
+  height: 20px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.publication-resources { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-top:-4px; }
+.publication-resource { display:inline-flex; align-items:center; gap:6px; padding:4px 9px; border:1px solid #d5dfe7; border-radius:999px; background:#fbfdff; color:#1766b0; font-size:0.82rem; line-height:1.5; text-decoration:none; transition:color 150ms; }
+.publication-resource:hover, .publication-resource:focus-visible { color:#104a82; background:#eef4f8; border-color:#8aa4b8; text-decoration:none; }
+.publication-resource:focus-visible { outline:2px solid #1766b0; outline-offset:2px; }
+.publication-resource-icon { display:inline-flex; align-items:center; justify-content:center; flex:none; width:16px; height:16px; font-size:15px; color:inherit; }
+.publication-resource-icon > img, .publication-resource-icon > svg { width:14px; height:14px; }
+.publication-resource-icon .fa-github { color:#24292f; }
+.publication-pdf { padding:1px 2px; border-radius:3px; background:#e74c3c; color:#fff; font-size:8px; font-weight:700; }
+.publication-bib { font-family:monospace; font-size:11px; font-weight:700; white-space:nowrap; }
+.publication-resources .sdpose-downloads { margin-top:0; display:inline-flex; align-items:center; padding:7px 0; }
+
+/* Compact resource links. */
+a.publication-resource { margin: 3px 4px 3px 0; vertical-align: middle; }
+.publication-resources .publication-resource { margin: 0; }
+
+.publication-star-count { padding-left:6px; border-left:1px solid #d5dfe7; font-size:0.75rem; font-variant-numeric:tabular-nums; }
+
+a.publication-star {
+  padding: 3px 8px;
+  border: 1px solid #d5dfe7;
+  border-radius: 999px;
+  background: #fbfdff;
+}
+a.publication-star:hover,
+a.publication-star:focus-visible {
+  background: #eef4f8;
+  border-color: #8aa4b8;
+  text-decoration: none;
+}
+/*--------------------*/
