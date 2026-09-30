@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <!-- Bulma Version 0.7.5-->
   <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
-  <link href='css/style.css?_t=20260930-ballet-counter' rel='stylesheet' type='text/css'>
+  <link href='css/style.css?_t=20260930-raindrop-counter' rel='stylesheet' type='text/css'>
   <script defer src="font-awesome-5.9.0/js/brands.min.js"></script>
   <script defer src="font-awesome-5.9.0/js/fontawesome.min.js"></script>
     <style>
@@ -1180,9 +1180,9 @@
       <div id="visitor-counter" class="visitor-counter">
         <a class="visitor-counter-badge" href="https://busuanzi.ibruce.info/" target="_blank" rel="noopener" aria-label="Total page views, powered by Busuanzi">
           <span class="visitor-counter-ballet" aria-hidden="true">🩰</span>
+          <span id="visitor-counter-digits" class="visitor-counter-digits" hidden></span>
           <span id="busuanzi_container_site_pv" style="display:none"><span id="busuanzi_value_site_pv"></span> <span class="visitor-counter-label">page views</span></span>
           <span id="visitor-counter-status">Page views unavailable</span>
-          <span class="visitor-counter-sparkle" aria-hidden="true">✧</span>
         </a>
       </div>
     </footer>
@@ -1287,14 +1287,28 @@
   <script>
     (function () {
       var status = document.getElementById('visitor-counter-status');
+      var digits = document.getElementById('visitor-counter-digits');
+      function renderDigits(count) {
+        digits.replaceChildren();
+        count.split('').forEach(function (number) {
+          var digit = document.createElement('span');
+          digit.className = 'visitor-counter-digit';
+          digit.textContent = number;
+          digits.appendChild(digit);
+        });
+        digits.setAttribute('aria-label', count + ' page views');
+        digits.hidden = false;
+      }
       if (location.hostname !== 'yyuanad.github.io') {
-        status.textContent = '— page views (preview)';
+        renderDigits('7662');
+        status.textContent = 'Style preview · sample count';
         return;
       }
       status.textContent = 'Loading page views…';
       var value = document.getElementById('busuanzi_value_site_pv');
       var observer = new MutationObserver(function () {
         if (/^\d+$/.test(value.textContent.trim())) {
+          renderDigits(value.textContent.trim());
           status.hidden = true;
           observer.disconnect();
         }

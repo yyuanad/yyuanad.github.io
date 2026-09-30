@@ -353,13 +353,30 @@ a.publication-star:focus-visible {
 .visitor-counter { text-align:center; margin:16px 0 24px; }
 a.visitor-counter-badge {
   display:inline-flex; align-items:center; gap:9px;
-  padding:7px 14px; border:1px solid #eddde3; border-radius:999px;
-  background:#fff9fb; color:#816773; font-size:12px;
+  padding:4px 0; border:0; border-radius:0;
+  background:transparent; color:#816773; font-size:12px;
   line-height:1.5; text-decoration:none;
 }
-a.visitor-counter-badge:hover { background:#fff2f7; border-color:#d9b7c5; color:#68515c; text-decoration:none; }
+a.visitor-counter-badge:hover { background:transparent; color:#68515c; text-decoration:none; }
 a.visitor-counter-badge:focus-visible { outline:2px solid #af7e94; outline-offset:3px; }
 .visitor-counter-ballet { font-size:20px; line-height:1; }
 .visitor-counter-sparkle { color:#c699ad; font-size:16px; }
 #busuanzi_value_site_pv { font-weight:600; font-variant-numeric:tabular-nums; }
 .visitor-counter-label { margin-left:3px; }
+
+.visitor-counter-digits { display:inline-flex; gap:4px; padding:12px 0; }
+.visitor-counter-digits[hidden] { display:none; }
+.visitor-counter-digit {
+  position:relative; display:inline-flex; align-items:center; justify-content:center;
+  width:16px; height:16px; border-radius:50%;
+  background:linear-gradient(145deg,#e7f3fa,#aed2e7); color:white;
+  font:italic 12px/1 Georgia,serif;
+}
+.visitor-counter-digit::before, .visitor-counter-digit::after {
+  content:""; position:absolute; width:5px; height:7px;
+  border-radius:70% 30% 65% 35%; transform:rotate(25deg);
+  background:linear-gradient(145deg,#eff8fc,#b9d9eb);
+}
+.visitor-counter-digit::before { top:-10px; left:6px; }
+.visitor-counter-digit::after { bottom:-10px; left:6px; }
+#busuanzi_container_site_pv { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
