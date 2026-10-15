@@ -380,3 +380,14 @@ a.visitor-counter-badge:focus-visible { outline:2px solid #af7e94; outline-offse
 .visitor-counter-digit::before { top:-10px; left:6px; }
 .visitor-counter-digit::after { bottom:-10px; left:6px; }
 #busuanzi_container_site_pv { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+
+/* Compact publication venue labels. */
+.publication-venues { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:10px; }
+.publication-venue {
+  display:inline-block; padding:4px 9px; border-radius:5px;
+  font-size:0.78rem; font-weight:600; line-height:1.4; letter-spacing:0;
+}
+.publication-venue-main { background:#e6effb; color:#24528a; }
+a.publication-venue-workshop { background:#f0eafa; color:#70529a; text-decoration:none; }
+a.publication-venue-workshop:hover { background:#e6dcf4; color:#543678; text-decoration:none; }
+a.publication-venue-workshop:focus-visible { outline:2px solid #70529a; outline-offset:3px; }
