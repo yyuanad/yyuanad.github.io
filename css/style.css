@@ -391,3 +391,10 @@ a.visitor-counter-badge:focus-visible { outline:2px solid #af7e94; outline-offse
 a.publication-venue-workshop { background:#f0eafa; color:#70529a; text-decoration:none; }
 a.publication-venue-workshop:hover { background:#e6dcf4; color:#543678; text-decoration:none; }
 a.publication-venue-workshop:focus-visible { outline:2px solid #70529a; outline-offset:3px; }
+
+/* Related presentations remain secondary to the main publication venue. */
+.publication-workshops { margin: -5px 0 12px; }
+.publication-workshops-label { margin-bottom: 6px; font-size: 0.76rem; color: #737078; }
+.publication-workshops .publication-venues { gap: 6px; margin-bottom: 0; }
+.publication-workshop-tag { background: #f0eafa; color: #70529a; font-size: 0.73rem; font-weight: 400; }
+.publication-workshop-tag strong { color: inherit; font-weight: 600; }
