@@ -118,9 +118,10 @@
             <!-- details -->
             <div class="details profile-contact">
               <h3><svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><span>Emails:</span></h3>
-              <p><a href="mailto:yuanyua@bc.edu">yuanyua[at]bc[dot]edu</a></p>
-              <p><a href="mailto:miayuan@mit.edu" style="text-decoration: line-through;">miayuan[at]mit[dot]edu</a></p>
-              <p><a href="mailto:miayuany@gmail.com">miayuany[at]gmail[dot]com</a></p>
+              <p><a href="mailto:yuanyua@bc.edu">yuanyua[at]bc[dot]edu</a><span class="email-purpose">(work)</span></p>
+              <p class="inactive-email"><a href="mailto:miayuan@mit.edu" style="text-decoration: line-through;">miayuan[at]mit[dot]edu</a></p>
+              <p><a href="mailto:miayuanmit@gmail.com">miayuanmit[at]gmail[dot]com</a><span class="email-purpose">(applications)</span></p>
+              <p><a href="mailto:miayuany@gmail.com">miayuany[at]gmail[dot]com</a><span class="email-purpose">(personal)</span></p>
             </div>
             <!-- social network icons -->
             <div class="social profile-social">
@@ -186,16 +187,14 @@
             I am a <a href="https://innovation.mit.edu/wisdm-speaker/yuan-yuan/" target="_blank">WISDM speaker</a> in <a href="https://innovation.mit.edu/" target="_blank">MIT Office of Innovation</a>. I am passionate about fostering STEM community diversity, equity, and inclusion through speaking, mentoring, teaching, academic collaborations, and outreach. 
             </p>
 
-            <!-- <em class="red"><b>Recruiting:</b> </em> -->
-
             <h4><span>🔥🔥🔥</span><em class="red"><b> Recruiting:</b></em></h4>
 
-            <!-- I am recruiting postdocs as well as interns, RAs, and visiting students. Send me an email if you are interested in working with me.</em> I warmly welcome anyone interested in collaborating or discussing research with me, whether remotely or in person. -->
-
-            <p>
-            <b>Prospective students:</b> I am currently seeking multiple highly motivated students to join my lab as postdocs, PhDs (Fall 2027, please submit your application through the <a href="https://www.bc.edu/content/bc-web/schools/morrissey/departments/computer-science/academics/phd.html" target="_blank" rel="noopener"><b>official portal</b></a> and mention my name in your application), undergraduates, and visiting students/scholars (in-person or remote). If interested, please complete this <a href="https://forms.gle/L5v4rcouGkE6B4pV6" target="_blank"><b>Google form</b></a> and contact <a href="mailto:miayuanmit@gmail.com">miayuanmit@gmail.com</a> (cc <a href="mailto:yuanyua@bc.edu">yuanyua@bc.edu</a>).
-            <br>For Fall 2027 Ph.D. applicants, the application deadline is <b>December 15, 2026</b>. Applications will be reviewed by the admissions committee after the deadline.
-            </p>
+            <ul class="recruiting-list">
+              <li><strong>Postdocs (1&ndash;2 openings):</strong> Research areas: Multimodal AI, Generative AI, LLMs and MLLMs, AI Agents, AI for Health, and AI for Science.<span class="recruiting-application">Please complete this <a href="https://forms.gle/L5v4rcouGkE6B4pV6" target="_blank" rel="noopener">Google form</a> and email your CV and a brief description of your research interests to <a href="mailto:miayuanmit@gmail.com">miayuanmit@gmail.com</a> (cc <a href="mailto:yuanyua@bc.edu">yuanyua@bc.edu</a>).</span></li>
+              <li><strong>NIH R01-funded postdoc (1 opening):</strong> Join our NIH R01-funded project on AI-enabled ultrasound for neonatal growth and nutritional assessment.<span class="recruiting-application">Please apply through the <a href="https://bc.csod.com/ux/ats/careersite/2/home/requisition/11347?c=bc" target="_blank" rel="noopener">official job application portal</a>.</span></li>
+              <li><strong>Ph.D. students (2 openings &middot; Fall 2027):</strong> Applicants interested in the research areas above are encouraged to apply.<span class="recruiting-application">Please submit your application through the <a href="https://apply.bc.edu/apply/" target="_blank" rel="noopener">BC Graduate Application Portal</a> and mention Yuan Yuan in your application. Deadline: December 15, 2026. See the <a href="https://www.bc.edu/content/bc-web/schools/morrissey/departments/computer-science/academics/phd.html" target="_blank" rel="noopener">CS Ph.D. program website</a> for admissions information.</span><span class="recruiting-application">After submitting your application, please complete this <a href="https://forms.gle/L5v4rcouGkE6B4pV6" target="_blank" rel="noopener">Google form</a> and contact <a href="mailto:miayuanmit@gmail.com">miayuanmit@gmail.com</a> (cc <a href="mailto:yuanyua@bc.edu">yuanyua@bc.edu</a>).</span></li>
+              <li><strong>Inquiries and other opportunities:</strong> I also welcome undergraduates, interns, and visiting students/scholars (in-person or remote). If interested, please complete this <a href="https://forms.gle/L5v4rcouGkE6B4pV6" target="_blank" rel="noopener">Google form</a> and contact <a href="mailto:miayuanmit@gmail.com">miayuanmit@gmail.com</a> (cc <a href="mailto:yuanyua@bc.edu">yuanyua@bc.edu</a>). I welcome remote or in-person research collaborations.</li>
+            </ul>
 
 <!--             <p class="tight-spacing">
             <b>Preferred skills:</b>
@@ -214,11 +213,9 @@
             <!-- I conduct research in machine learning and its applications, which include but are not limited to: -->
             
             <ul>
-            <li><b>Multisensory AI & Generative AI:</b> the development of bleeding-edge AI techniques aims to comprehend and make meaningful use of various data modalities, such as vision, Artificial Intelligence of Things (AIoT), language (including LLMs), and medical data, etc. </li>
-            <li><b>AI for medicine, health, science:</b> new digital biomarker discovery, contactless health monitoring, etc., to advance personalized medicine.
-             <!-- of patients with Parkinson's, Alzheimer's, mental health, etc. </li> -->
-            <!-- <li><b>Computer Vision:</b> human-centered AI, such as human behavior and daily activities understanding.</li> -->
-            <li><b>Trustworthy & Safe AI:</b> e.g., interpretability, robustness, alignment, etc. </li>
+            <li><b>Multimodal &amp; Generative AI:</b> Learning from and generating across vision, language, sensor, and medical data, including LLMs and MLLMs.</li>
+            <li><b>AI for Health &amp; Science:</b> Digital biomarkers, health monitoring, personalized medicine, and AI-enabled scientific discovery.</li>
+            <li><b>AI Agents:</b> Reasoning, planning, and tool use for agents that interact with complex environments and carry out multi-step tasks.</li>
             </ul>
 
             </p>      

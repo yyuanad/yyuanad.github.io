@@ -123,7 +123,15 @@ body {
   line-height: 1.42;
 }
 
-.profile-contact p:nth-of-type(2) {
+.profile-contact .email-purpose {
+  display: block;
+  margin: 0.08rem 0 0.45rem;
+  color: #696e75;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+.profile-contact .inactive-email {
   opacity: 0.52;
 }
 
@@ -291,6 +299,189 @@ i.email {
   vertical-align: 0.1em;
 }
 
+.opportunities-note {
+  --op-maroon: #7a1f2b;
+  --op-ink: #292725;
+  --op-muted: #69645f;
+  --op-line: #ded9d3;
+  margin: 2.35rem 0 2.7rem;
+  padding: 1.55rem 0 0;
+  border-top: 2px solid var(--op-maroon);
+  border-bottom: 1px solid var(--op-line);
+  color: var(--op-ink);
+  background: #fff;
+}
+
+.opportunities-note-header {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.content .opportunities-kicker {
+  margin: 0 0 0.28rem;
+  color: var(--op-maroon);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.content .opportunities-note h4 {
+  margin: 0;
+  color: var(--op-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.opportunities-overview {
+  flex: none;
+  padding-bottom: 0.2rem;
+  color: var(--op-maroon);
+  border-bottom: 1px solid rgba(122, 31, 43, 0.35);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.opportunities-overview:hover,
+.opportunities-overview:focus {
+  color: #4e111a;
+  border-bottom-color: #4e111a;
+  text-decoration: none;
+}
+
+.content .opportunities-intro {
+  max-width: 920px;
+  margin: 1.15rem 0 1.35rem;
+  color: var(--op-muted);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.opportunities-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--op-line);
+  border-bottom: 1px solid var(--op-line);
+}
+
+.opportunities-links > a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: center;
+  min-width: 0;
+  padding: 1.05rem 1rem;
+  color: var(--op-ink);
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.opportunities-links > a + a {
+  border-left: 1px solid var(--op-line);
+}
+
+.opportunities-links > a:hover,
+.opportunities-links > a:focus {
+  color: var(--op-maroon);
+  background: #fbf8f6;
+}
+
+.opportunity-index {
+  align-self: start;
+  padding-top: 0.12rem;
+  color: #a09a94;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.68rem;
+}
+
+.opportunities-links b,
+.opportunities-links small {
+  display: block;
+}
+
+.opportunities-links b {
+  overflow: hidden;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.97rem;
+  font-weight: 400;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.opportunities-links small {
+  margin-top: 0.18rem;
+  color: var(--op-muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+}
+
+.opportunity-arrow {
+  color: var(--op-maroon);
+  font-size: 0.82rem;
+}
+
+.content .opportunities-collaboration {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.7rem;
+  align-items: baseline;
+  margin: 0;
+  padding: 1rem 0 1.15rem;
+  color: var(--op-muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.collaboration-label {
+  color: var(--op-ink);
+  font-weight: 700;
+  letter-spacing: 0.015em;
+}
+
+.opportunities-collaboration a {
+  margin-left: auto;
+  color: var(--op-maroon);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.opportunities-collaboration a:hover,
+.opportunities-collaboration a:focus {
+  color: #4e111a;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 780px) {
+  .opportunities-links {
+    grid-template-columns: 1fr;
+  }
+
+  .opportunities-links > a + a {
+    border-top: 1px solid var(--op-line);
+    border-left: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .opportunities-note-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .opportunities-collaboration a {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 /* SDPose publication previews and live model download badge. */
 .sdpose-previews {
   display: grid;
@@ -398,3 +589,28 @@ a.publication-venue-workshop:focus-visible { outline:2px solid #70529a; outline-
 .publication-workshops .publication-venues { gap: 6px; margin-bottom: 0; }
 .publication-workshop-tag { background: #f0eafa; color: #70529a; font-size: 0.73rem; font-weight: 400; }
 .publication-workshop-tag strong { color: inherit; font-weight: 600; }
+
+/* Keep recruiting text readable within the homepage's existing bullet layout. */
+.content .recruiting-list {
+  margin-top: 0.85rem;
+  padding-left: 0.15rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.content .recruiting-list > li {
+  padding-left: 0.15rem;
+  margin-bottom: 1.15rem;
+}
+
+.recruiting-list strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #34373c;
+  font-weight: 600;
+}
+
+.recruiting-list .recruiting-application {
+  display: block;
+  margin-top: 0.25rem;
+}
