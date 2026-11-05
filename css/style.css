@@ -614,3 +614,15 @@ a.publication-venue-workshop:focus-visible { outline:2px solid #70529a; outline-
   display: block;
   margin-top: 0.25rem;
 }
+
+.recruiting-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.65rem;
+  margin-bottom: 0.25rem;
+}
+
+.recruiting-list .recruiting-heading strong {
+  margin-bottom: 0;
+}
